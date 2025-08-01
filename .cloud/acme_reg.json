@@ -1,0 +1,15 @@
+{
+    "body": {
+        "contact": [
+            "mailto:darkvoid7926+nabucasa@gmail.com"
+        ],
+        "key": {
+            "e": "AQAB",
+            "kty": "RSA",
+            "n": "yFxKFMoDU9wtKR07exR1d7moMP9sDSHckolPWkuXE_o08Zzx2RD6HcN5e4p4Wx0LhSFNuEiUlDRkNIfpEM1MyS89d-_pvK8uD2G-h6vPgkJ3XYDRkDjzi3D-rdPUTN_pfBFb3v2FZsd1J4CBcrgXJkKr5ri5Fho3kErU5xYgfYrNmVyhv_nzTfVmsvFB-0xaQGz21jc7nNXJXfp7FJhdg9P4jQDk_XXPkyJ_g_NrmUqgR5FNTNPi-35Pa9xR_9fd5Eh3FmOtG7QjAAPQEYgjH0BOgpuzJnH8f1vmRN5UM7vyxTX1F6B8v9-GgzIJ2qXCiyFEWT-BuEcDyH34YLl1_Q"
+        },
+        "status": "valid"
+    },
+    "terms_of_service": "https://letsencrypt.org/documents/LE-SA-v1.3-September-21-2022.pdf",
+    "uri": "https://acme-v02.api.letsencrypt.org/acme/acct/982627536"
+}

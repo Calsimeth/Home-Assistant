@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_monitor",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "header": {
+            "sensor": [
+              {
+                "platform": "command_line",
+                "name": "CPU Usage",
+                "command": "top -bn1 | grep load | awk '{printf \"%.2f\", $(NF-2)}'",
+                "unit_of_measurement": "%",
+                "scan_interval": 60
+              },
+              {
+                "platform": "command_line",
+                "name": "Memory Usage",
+                "command": "free | grep Mem | awk '{printf \"%.1f\", $3/$2 * 100.0}'",
+                "unit_of_measurement": "%",
+                "scan_interval": 60
+              },
+              {
+                "platform": "command_line",
+                "name": "CPU Temperature",
+                "command": "cat /sys/class/thermal/thermal_zone0/temp",
+                "unit_of_measurement": "°C",
+                "value_template": "{{ value | multiply(0.001) | round(1) }}",
+                "scan_interval": 60
+              },
+              {
+                "platform": "command_line",
+                "name": "Disk Usage",
+                "command": "df / | tail -1 | awk '{print $5}' | sed 's/%//'",
+                "unit_of_measurement": "%",
+                "scan_interval": 300
+              },
+              {
+                "platform": "command_line",
+                "name": "Load 1m",
+                "command": "uptime | awk -F'load average:' '{ print $2 }' | cut -d, -f1 | sed 's/^[ \\t]*//'",
+                "scan_interval": 60
+              },
+              {
+                "platform": "command_line",
+                "name": "Load 5m",
+                "command": "uptime | awk -F'load average:' '{ print $2 }' | cut -d, -f2 | sed 's/^[ \\t]*//'",
+                "scan_interval": 60
+              },
+              {
+                "platform": "command_line",
+                "name": "Load 15m",
+                "command": "uptime | awk -F'load average:' '{ print $2 }' | cut -d, -f3 | sed 's/^[ \\t]*//'",
+                "scan_interval": 60
+              }
+            ]
+          },
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "gauge",
+                      "entity": "sensor.system_monitor_processor_use",
+                      "name": "CPU Usage",
+                      "unit": "%",
+                      "min": 0,
+                      "max": 100,
+                      "severity": {
+                        "green": 0,
+                        "yellow": 60,
+                        "red": 80
+                      },
+                      "needle": true
+                    },
+                    {
+                      "type": "gauge",
+                      "entity": "sensor.system_monitor_memory_usage",
+                      "name": "Memory Usage",
+                      "unit": "%",
+                      "min": 0,
+                      "max": 100,
+                      "severity": {
+                        "green": 0,
+                        "yellow": 70,
+                        "red": 85
+                      },
+                      "needle": true
+                    },
+                    {
+                      "type": "gauge",
+                      "entity": "sensor.system_monitor_processor_temperature",
+                      "name": "CPU Temp",
+                      "unit": "°F",
+                      "min": 86,
+                      "max": 185,
+                      "severity": {
+                        "green": 86,
+                        "yellow": 149,
+                        "red": 167
+                      },
+                      "needle": true
+                    },
+                    {
+                      "type": "gauge",
+                      "entity": "sensor.system_monitor_disk_usage",
+                      "name": "Disk Usage",
+                      "unit": "%",
+                      "min": 0,
+                      "max": 100,
+                      "severity": {
+                        "green": 0,
+                        "yellow": 80,
+                        "red": 90
+                      },
+                      "needle": true
+                    }
+                  ]
+                },
+                {
+                  "type": "entities",
+                  "title": "System Load Averages",
+                  "show_header_toggle": false,
+                  "entities": [
+                    {
+                      "entity": "sensor.system_monitor_load_1_min",
+                      "name": "Load (1 min)",
+                      "icon": "mdi:speedometer",
+                      "secondary_info": "Current system activity"
+                    },
+                    {
+                      "entity": "sensor.system_monitor_load_5_min",
+                      "name": "Load (5 min)",
+                      "icon": "mdi:speedometer-medium",
+                      "secondary_info": "Short-term average"
+                    },
+                    {
+                      "entity": "sensor.system_monitor_load_15_min",
+                      "name": "Load (15 min)",
+                      "icon": "mdi:speedometer-slow",
+                      "secondary_info": "Long-term trend"
+                    }
+                  ]
+                },
+                {
+                  "type": "history-graph",
+                  "title": "System Performance Trends",
+                  "hours_to_show": 168,
+                  "refresh_interval": 60,
+                  "entities": [
+                    {
+                      "entity": "sensor.system_monitor_processor_use",
+                      "name": "CPU %"
+                    },
+                    {
+                      "entity": "sensor.system_monitor_memory_usage",
+                      "name": "Memory %"
+                    },
+                    {
+                      "entity": "sensor.system_monitor_processor_temperature",
+                      "name": "CPU Temp °C"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

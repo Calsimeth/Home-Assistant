@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "strategy": {
+        "type": "original-states",
+        "hide_entities_without_area": false,
+        "areas": {
+          "order": [
+            "kitchen",
+            "living_room",
+            "bedroom",
+            "bonus_room",
+            "upstairs",
+            "none"
+          ]
+        }
+      }
+    }
+  }
+}

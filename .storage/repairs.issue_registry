@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "repairs.issue_registry",
+  "data": {
+    "issues": [
+      {
+        "created": "2024-08-22T18:57:55.058202+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "fc5403db7d744662a20de33726a4b6ce"
+      },
+      {
+        "created": "2024-08-22T18:58:09.771265+00:00",
+        "dismissed_version": "2024.8.2",
+        "domain": "automation",
+        "is_persistent": false,
+        "issue_id": "automation.outdoor_lights_on_at_sunset_validation_failed_actions"
+      },
+      {
+        "created": "2025-06-23T13:01:54.830515+00:00",
+        "dismissed_version": null,
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "platform_integration_no_support_sensor_systemmonitor"
+      }
+    ]
+  }
+}

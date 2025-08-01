@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "image",
+  "data": {
+    "items": [
+      {
+        "id": "a8b525c5995e7798a887efa7e992fd3d",
+        "filesize": 347571,
+        "content_type": "image/jpeg",
+        "name": "1e.DSC_5632BW.jpg",
+        "uploaded_at": "2023-03-17T13:27:48.940889+00:00"
+      },
+      {
+        "id": "b16566ed5c149793ae639f6cf0ceeea3",
+        "filesize": 214422,
+        "content_type": "image/jpeg",
+        "name": "1e.DSC_5747.JPG",
+        "uploaded_at": "2023-03-17T13:30:50.281760+00:00"
+      },
+      {
+        "id": "5a140300642fb67892f516772116bf0f",
+        "filesize": 790128,
+        "content_type": "image/jpeg",
+        "name": "_DSF9074.JPG",
+        "uploaded_at": "2023-03-26T22:27:16.875479+00:00"
+      },
+      {
+        "id": "b377a1d4827b5b55adfd990b98c4552b",
+        "filesize": 236402,
+        "content_type": "image/jpeg",
+        "name": "ag20398.jpg",
+        "uploaded_at": "2025-04-30T22:47:55.083712+00:00"
+      }
+    ]
+  }
+}

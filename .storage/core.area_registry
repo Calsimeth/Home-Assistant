@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "minor_version": 8,
+  "key": "core.area_registry",
+  "data": {
+    "areas": [
+      {
+        "aliases": [],
+        "floor_id": "first_floor",
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "living_room",
+        "labels": [],
+        "name": "Living Room",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "2025-05-02T03:04:16.845463+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "first_floor",
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "kitchen",
+        "labels": [],
+        "name": "Kitchen",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "2025-05-02T03:04:16.844464+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "second_floor",
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "bedroom",
+        "labels": [],
+        "name": "Master Bedroom",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "2025-05-02T03:04:44.436105+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "bonus_room",
+        "labels": [],
+        "name": "Bonus Room",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2025-05-02T03:09:22.036407+00:00",
+        "modified_at": "2025-05-02T03:09:22.036421+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "none",
+        "labels": [],
+        "name": "None",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2025-05-02T03:09:22.050428+00:00",
+        "modified_at": "2025-05-02T03:09:22.050443+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "upstairs",
+        "labels": [],
+        "name": "Upstairs",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2025-05-02T03:09:23.767193+00:00",
+        "modified_at": "2025-05-02T03:09:23.767212+00:00"
+      }
+    ]
+  }
+}

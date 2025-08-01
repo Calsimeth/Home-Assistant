@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "name": "Caleb",
+        "user_id": "b7ee3547d7cf42049848b74472999e70",
+        "device_trackers": [
+          "device_tracker.pixel_7_pro"
+        ],
+        "id": "caleb",
+        "picture": "/api/image/serve/b377a1d4827b5b55adfd990b98c4552b/512x512"
+      }
+    ]
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"2025-05-02T03:24:20.147331+00:00","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-08-01T02:16:37.006360+00:00","last_reported":"2025-08-01T02:16:37.006360+00:00","last_updated":"2025-08-01T02:16:37.006360+00:00","context":{"id":"01K1HPNFWESK3ZBG8FZPX73NZQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"event.backup_automatic_backup","state":"2025-07-31T15:11:46.704+00:00","attributes":{"event_types":["completed","failed","in_progress"],"event_type":"completed","backup_stage":null,"failed_reason":null,"friendly_name":"Backup Automatic backup"},"last_changed":"2025-08-01T02:16:37.475968+00:00","last_reported":"2025-08-01T02:16:37.475968+00:00","last_updated":"2025-08-01T02:16:37.475968+00:00","context":{"id":"01K1HPNGB34JVJ5H0BKE93MEVK","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "completed",
+        "last_event_attributes": {
+          "backup_stage": null,
+          "failed_reason": null
+        }
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"stt.home_assistant_cloud","state":"unknown","attributes":{"friendly_name":"Home Assistant Cloud"},"last_changed":"2025-08-01T02:16:38.398393+00:00","last_reported":"2025-08-01T02:16:38.398393+00:00","last_updated":"2025-08-01T02:16:38.398393+00:00","context":{"id":"01K1HPNH7YFABCZNX88JAZJMX7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.home_assistant_cloud","state":"unknown","attributes":{"friendly_name":"Home Assistant Cloud"},"last_changed":"2025-08-01T02:16:38.399762+00:00","last_reported":"2025-08-01T02:16:38.399762+00:00","last_updated":"2025-08-01T02:16:38.399762+00:00","context":{"id":"01K1HPNH7ZD1VX3ECZ4Q17RBPY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"person.caleb","state":"unknown","attributes":{"editable":true,"id":"caleb","device_trackers":["device_tracker.pixel_7_pro"],"user_id":"b7ee3547d7cf42049848b74472999e70","entity_picture":"/api/image/serve/b377a1d4827b5b55adfd990b98c4552b/512x512","friendly_name":"Caleb"},"last_changed":"2025-08-01T02:16:38.626813+00:00","last_reported":"2025-08-01T02:16:53.163664+00:00","last_updated":"2025-08-01T02:16:53.163664+00:00","context":{"id":"01K1HPNZNB4C8JGJQMQFR5PX5V","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.pixel_7_pro_is_charging","state":"on","attributes":{"device_class":"plug","icon":"mdi:power-plug","friendly_name":"Pixel 7 Pro Is charging"},"last_changed":"2025-08-01T13:13:17.752351+00:00","last_reported":"2025-08-01T13:13:17.752351+00:00","last_updated":"2025-08-01T13:13:17.752351+00:00","context":{"id":"01K1JW7X5RBPCC2HBYCFMAWEFF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.pixel_7_pro","state":"unknown","attributes":{"source_type":"gps","friendly_name":"Pixel 7 Pro"},"last_changed":"2025-08-01T02:16:49.130380+00:00","last_reported":"2025-08-01T02:16:49.130380+00:00","last_updated":"2025-08-01T02:16:49.130380+00:00","context":{"id":"01K1HPNVQAK8FE6VRZW5Y13X44","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.pixel_7_pro_battery_level","state":"98","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-charging-90","friendly_name":"Pixel 7 Pro Battery level"},"last_changed":"2025-08-01T13:13:17.734818+00:00","last_reported":"2025-08-01T13:13:17.734818+00:00","last_updated":"2025-08-01T13:13:17.734818+00:00","context":{"id":"01K1JW7X56EKMBVHV61PKD966Q","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 98,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.pixel_7_pro_battery_state","state":"charging","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery-plus","friendly_name":"Pixel 7 Pro Battery state"},"last_changed":"2025-08-01T13:13:17.736015+00:00","last_reported":"2025-08-01T13:13:17.736015+00:00","last_updated":"2025-08-01T13:13:17.736015+00:00","context":{"id":"01K1JW7X58TZQS5EQE81N46VCF","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.pixel_7_pro_charger_type","state":"usb","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:usb-port","friendly_name":"Pixel 7 Pro Charger type"},"last_changed":"2025-08-01T13:13:17.753506+00:00","last_reported":"2025-08-01T13:13:17.753506+00:00","last_updated":"2025-08-01T13:13:17.753506+00:00","context":{"id":"01K1JW7X5SZ0TJJC9WJCGEFT0F","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "usb",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.pixel_7_pro_battery_health","state":"good","attributes":{"options":["cold","dead","good","overheated","over_voltage","failed"],"device_class":"enum","icon":"mdi:battery-heart-variant","friendly_name":"Pixel 7 Pro Battery health"},"last_changed":"2025-08-01T02:16:49.140688+00:00","last_reported":"2025-08-01T02:16:49.140688+00:00","last_updated":"2025-08-01T02:16:49.140688+00:00","context":{"id":"01K1HPNVQMQ54P5J90DMSREPV1","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "good",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.pixel_7_pro_battery_temperature","state":"28.1","attributes":{"state_class":"measurement","unit_of_measurement":"°C","device_class":"temperature","icon":"mdi:battery","friendly_name":"Pixel 7 Pro Battery temperature"},"last_changed":"2025-08-01T13:13:17.754572+00:00","last_reported":"2025-08-01T13:13:17.754572+00:00","last_updated":"2025-08-01T13:13:17.754572+00:00","context":{"id":"01K1JW7X5TBWVVT80Q9K4T49M8","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 28.1,
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.pixel_7_pro_battery_power","state":"2.62","attributes":{"state_class":"measurement","current":0.596875,"voltage":4.396,"unit_of_measurement":"W","device_class":"power","icon":"mdi:battery-plus","friendly_name":"Pixel 7 Pro Battery power"},"last_changed":"2025-08-01T13:13:23.360142+00:00","last_reported":"2025-08-01T13:13:23.360142+00:00","last_updated":"2025-08-01T13:13:23.360142+00:00","context":{"id":"01K1JW82N00F52KT1NJMH1EXAC","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 2.62,
+        "native_unit_of_measurement": "W"
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.piper","state":"2025-05-02T02:26:22.204193+00:00","attributes":{"friendly_name":"piper"},"last_changed":"2025-08-01T02:16:49.569139+00:00","last_reported":"2025-08-01T02:16:49.569139+00:00","last_updated":"2025-08-01T02:16:49.569139+00:00","context":{"id":"01K1HPNW51ARG8884B4X6CC8X4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"stt.speech_to_phrase","state":"unknown","attributes":{"friendly_name":"speech-to-phrase"},"last_changed":"2025-08-01T02:16:49.933014+00:00","last_reported":"2025-08-01T02:16:49.933014+00:00","last_updated":"2025-08-01T02:16:49.933014+00:00","context":{"id":"01K1HPNWGDQ9TSB6QWFXJ7P7NW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.node_4_ping","state":"unknown","attributes":{"friendly_name":"Desk Motion Sensor Ping"},"last_changed":"2025-08-01T02:16:50.322178+00:00","last_reported":"2025-08-01T02:16:50.322178+00:00","last_updated":"2025-08-01T02:16:50.322178+00:00","context":{"id":"01K1HPNWWJY6TAKMJNDAX3MDH3","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.node_7_ping","state":"unknown","attributes":{"friendly_name":"Lamp Plug Ping"},"last_changed":"2025-08-01T02:16:50.333131+00:00","last_reported":"2025-08-01T02:16:50.333131+00:00","last_updated":"2025-08-01T02:16:50.333131+00:00","context":{"id":"01K1HPNWWXAB921S0A9XSBHGQ0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.node_13_ping","state":"unknown","attributes":{"friendly_name":"Lamp Plug Ping"},"last_changed":"2025-08-01T02:16:50.642467+00:00","last_reported":"2025-08-01T02:16:50.642467+00:00","last_updated":"2025-08-01T02:16:50.642467+00:00","context":{"id":"01K1HPNX6JZN6F4NQ9NK7G7KBD","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.node_26_ping","state":"unknown","attributes":{"friendly_name":"Fan Plug Ping"},"last_changed":"2025-08-01T02:16:50.648109+00:00","last_reported":"2025-08-01T02:16:50.648109+00:00","last_updated":"2025-08-01T02:16:50.648109+00:00","context":{"id":"01K1HPNX6RVEM0Y16BV2QGYATR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.node_28_ping","state":"unknown","attributes":{"friendly_name":"Salt Lamp Ping"},"last_changed":"2025-08-01T02:16:50.954971+00:00","last_reported":"2025-08-01T02:16:50.954971+00:00","last_updated":"2025-08-01T02:16:50.954971+00:00","context":{"id":"01K1HPNXGA9HWTPPYGZ1STEDXE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.node_40_ping","state":"unknown","attributes":{"friendly_name":"Fan Ping"},"last_changed":"2025-08-01T02:16:51.254399+00:00","last_reported":"2025-08-01T02:16:51.254399+00:00","last_updated":"2025-08-01T02:16:51.254399+00:00","context":{"id":"01K1HPNXSPFJWT2WV5R9PJ659B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.node_42_ping","state":"2023-04-09T18:24:26.637095+00:00","attributes":{"friendly_name":"Lava Lamp Ping"},"last_changed":"2025-08-01T02:16:51.260053+00:00","last_reported":"2025-08-01T02:16:51.260053+00:00","last_updated":"2025-08-01T02:16:51.260053+00:00","context":{"id":"01K1HPNXSWMPCY5ENTRT3H0YTH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.plug_in_lamp_dimming_module_ping_3","state":"unknown","attributes":{"friendly_name":"Nightstand Lamp Ping"},"last_changed":"2025-08-01T02:16:51.557119+00:00","last_reported":"2025-08-01T02:16:51.557119+00:00","last_updated":"2025-08-01T02:16:51.557119+00:00","context":{"id":"01K1HPNY35TY61ZSVMW4WVD166","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.plug_in_lamp_dimming_module_ping_5","state":"unknown","attributes":{"friendly_name":"Lava Lamp Plug Ping"},"last_changed":"2025-08-01T02:16:51.883182+00:00","last_reported":"2025-08-01T02:16:51.883182+00:00","last_updated":"2025-08-01T02:16:51.883182+00:00","context":{"id":"01K1HPNYDB7JGBP5Y30Z43Q69Y","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.lamp_plug_firmware_2","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.20","in_progress":false,"latest_version":"1.20","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/zwave_js/icon.png","friendly_name":"Lamp Plug Firmware","supported_features":21},"last_changed":"2025-08-01T02:16:52.203263+00:00","last_reported":"2025-08-01T02:16:52.203263+00:00","last_updated":"2025-08-01T02:16:52.203263+00:00","context":{"id":"01K1HPNYQBRQFQ0G2ZEK35N504","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "latest_version_firmware": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.plug_in_1_outlet_dimmer_500s_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"5.25","in_progress":false,"latest_version":"5.25","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/zwave_js/icon.png","friendly_name":"Fan Plug Firmware","supported_features":21},"last_changed":"2025-08-01T02:16:52.205946+00:00","last_reported":"2025-08-01T02:16:52.205946+00:00","last_updated":"2025-08-01T02:16:52.205946+00:00","context":{"id":"01K1HPNYQD0VERAMZAAFDFESSY","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "latest_version_firmware": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.plug_in_lamp_dimming_module_firmware_8","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.13","in_progress":false,"latest_version":"1.13","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/zwave_js/icon.png","friendly_name":"Salt Lamp Firmware","supported_features":21},"last_changed":"2025-08-01T02:16:52.208074+00:00","last_reported":"2025-08-01T02:16:52.208074+00:00","last_updated":"2025-08-01T02:16:52.208074+00:00","context":{"id":"01K1HPNYQGT7RSEFFR2KE986A6","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "latest_version_firmware": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.lava_lamp_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.13","in_progress":false,"latest_version":"1.13","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/zwave_js/icon.png","friendly_name":"Lava Lamp Firmware","supported_features":21},"last_changed":"2025-08-01T02:16:52.210387+00:00","last_reported":"2025-08-01T02:16:52.210387+00:00","last_updated":"2025-08-01T02:16:52.210387+00:00","context":{"id":"01K1HPNYQJ5N4TB91S01WMBYQP","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "latest_version_firmware": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.plug_in_lamp_dimming_module_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.13","in_progress":false,"latest_version":"1.13","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/zwave_js/icon.png","friendly_name":"Nightstand Lamp Firmware","supported_features":21},"last_changed":"2025-08-01T02:16:52.212690+00:00","last_reported":"2025-08-01T02:16:52.212690+00:00","last_updated":"2025-08-01T02:16:52.212690+00:00","context":{"id":"01K1HPNYQMM37BS9H7C5GXW14K","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "latest_version_firmware": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.corner_plug_ping","state":"unknown","attributes":{"friendly_name":"Floor Lamp Ping"},"last_changed":"2025-08-01T02:16:52.216586+00:00","last_reported":"2025-08-01T02:16:52.216586+00:00","last_updated":"2025-08-01T02:16:52.216586+00:00","context":{"id":"01K1HPNYQR51B0KRART5CQB4NR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.nightstand_lamp_ping","state":"unknown","attributes":{"friendly_name":"None Ping"},"last_changed":"2025-08-01T02:16:52.515873+00:00","last_reported":"2025-08-01T02:16:52.515873+00:00","last_updated":"2025-08-01T02:16:52.515873+00:00","context":{"id":"01K1HPNZ13D1PDKG4RQVAKDF15","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.mantle_ping","state":"unknown","attributes":{"friendly_name":"None Ping"},"last_changed":"2025-08-01T02:16:52.521268+00:00","last_reported":"2025-08-01T02:16:52.521268+00:00","last_updated":"2025-08-01T02:16:52.521268+00:00","context":{"id":"01K1HPNZ191PQ7FB0K33CD5BT5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.shelf_lights_ping","state":"unknown","attributes":{"friendly_name":"Salt Lamp Ping"},"last_changed":"2025-08-01T02:16:52.821864+00:00","last_reported":"2025-08-01T02:16:52.821864+00:00","last_updated":"2025-08-01T02:16:52.821864+00:00","context":{"id":"01K1HPNZANZ4DZ9Y7G4PNQJEZN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.plant_lights_ping","state":"unknown","attributes":{"friendly_name":"None Ping"},"last_changed":"2025-08-01T02:16:52.827397+00:00","last_reported":"2025-08-01T02:16:52.827397+00:00","last_updated":"2025-08-01T02:16:52.827397+00:00","context":{"id":"01K1HPNZAVPQR5JB3TDJMYNXSK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.plug_in_lamp_dimming_module_firmware_3","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.20","in_progress":false,"latest_version":"1.20","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/zwave_js/icon.png","friendly_name":"Lava Lamp Plug Firmware","supported_features":21},"last_changed":"2025-08-01T02:16:52.832893+00:00","last_reported":"2025-08-01T02:16:52.832893+00:00","last_updated":"2025-08-01T02:16:52.832893+00:00","context":{"id":"01K1HPNZB0HX5R9H8V82Z2F7TV","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "latest_version_firmware": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.corner_plug_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.13","in_progress":false,"latest_version":"1.13","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/zwave_js/icon.png","friendly_name":"Floor Lamp Firmware","supported_features":21},"last_changed":"2025-08-01T02:16:52.851401+00:00","last_reported":"2025-08-01T02:16:52.851401+00:00","last_updated":"2025-08-01T02:16:52.851401+00:00","context":{"id":"01K1HPNZBK9B6E0DTM0288886B","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "latest_version_firmware": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mantle_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.17","in_progress":false,"latest_version":"1.17","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/zwave_js/icon.png","friendly_name":"None Firmware","supported_features":21},"last_changed":"2025-08-01T02:16:52.853596+00:00","last_reported":"2025-08-01T02:16:52.853596+00:00","last_updated":"2025-08-01T02:16:52.853596+00:00","context":{"id":"01K1HPNZBN86YYEQHQH8KY4PEN","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "latest_version_firmware": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.q5_max_after_walks","state":"unknown","attributes":{"friendly_name":"Q5 Max+ After Walks"},"last_changed":"2025-08-01T02:16:53.145954+00:00","last_reported":"2025-08-01T02:16:53.145954+00:00","last_updated":"2025-08-01T02:16:53.145954+00:00","context":{"id":"01K1HPNZMS3SS8KD3WM14S8V7F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.q5_max_after_meals","state":"unknown","attributes":{"friendly_name":"Q5 Max+ After Meals"},"last_changed":"2025-08-01T02:16:53.146503+00:00","last_reported":"2025-08-01T02:16:53.146503+00:00","last_updated":"2025-08-01T02:16:53.146503+00:00","context":{"id":"01K1HPNZMT1BBH8JEJVMKHRS7N","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"button.q5_max_full_cleaning","state":"unknown","attributes":{"friendly_name":"Q5 Max+ Full Cleaning"},"last_changed":"2025-08-01T02:16:53.147004+00:00","last_reported":"2025-08-01T02:16:53.147004+00:00","last_updated":"2025-08-01T02:16:53.147004+00:00","context":{"id":"01K1HPNZMVAYJP004CR4HG0G3D","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.07.2","in_progress":false,"latest_version":"2025.07.2","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2025.07.2","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/hassio/icon.png","friendly_name":"Home Assistant Supervisor Update","supported_features":1},"last_changed":"2025-08-01T02:26:34.055871+00:00","last_reported":"2025-08-01T02:26:34.055871+00:00","last_updated":"2025-08-01T02:26:34.055871+00:00","context":{"id":"01K1HQ7PY7A5EY5PR8VM5AVJGA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_core_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.7.3","in_progress":false,"latest_version":"2025.7.4","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":null,"title":"Home Assistant Core","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Core Update","supported_features":11},"last_changed":"2025-08-01T02:26:34.057898+00:00","last_reported":"2025-08-01T02:26:34.057898+00:00","last_updated":"2025-08-01T02:26:34.057898+00:00","context":{"id":"01K1HQ7PY9TR1V1C2V36KJYV48","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.z_wave_js_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"0.20.0","in_progress":false,"latest_version":"0.20.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"Z-Wave JS","update_percentage":null,"entity_picture":"/api/hassio/addons/core_zwave_js/icon","friendly_name":"Z-Wave JS Update","supported_features":25},"last_changed":"2025-08-01T02:26:34.059787+00:00","last_reported":"2025-08-01T02:26:34.059787+00:00","last_updated":"2025-08-01T02:26:34.059787+00:00","context":{"id":"01K1HQ7PYBK7RAYTFPMPZZJXSV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.node_red_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"20.0.0","in_progress":false,"latest_version":"20.0.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"Node-RED","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_nodered/icon","friendly_name":"Node-RED Update","supported_features":25},"last_changed":"2025-08-01T02:26:34.066256+00:00","last_reported":"2025-08-01T02:26:34.066256+00:00","last_updated":"2025-08-01T02:26:34.066256+00:00","context":{"id":"01K1HQ7PYJVRRX1696JE6RG9P9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.terminal_ssh_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"9.18.0","in_progress":false,"latest_version":"9.18.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"Terminal & SSH","update_percentage":null,"entity_picture":"/api/hassio/addons/core_ssh/icon","friendly_name":"Terminal & SSH Update","supported_features":25},"last_changed":"2025-08-01T02:26:34.070987+00:00","last_reported":"2025-08-01T02:26:34.070987+00:00","last_updated":"2025-08-01T02:26:34.070987+00:00","context":{"id":"01K1HQ7PYP5NFH2MZRGTBMP9W4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mosquitto_broker_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"6.5.1","in_progress":false,"latest_version":"6.5.1","release_summary":null,"release_url":null,"skipped_version":null,"title":"Mosquitto broker","update_percentage":null,"entity_picture":"/api/hassio/addons/core_mosquitto/icon","friendly_name":"Mosquitto broker Update","supported_features":25},"last_changed":"2025-08-01T02:26:34.072655+00:00","last_reported":"2025-08-01T02:26:34.072655+00:00","last_updated":"2025-08-01T02:26:34.072655+00:00","context":{"id":"01K1HQ7PYR1T7QP6220HSW1R1D","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.z_wave_js_ui_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"4.8.0","in_progress":false,"latest_version":"4.8.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"Z-Wave JS UI","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_zwavejs2mqtt/icon","friendly_name":"Z-Wave JS UI Update","supported_features":25},"last_changed":"2025-08-01T02:26:34.074401+00:00","last_reported":"2025-08-01T02:26:34.074401+00:00","last_updated":"2025-08-01T02:26:34.074401+00:00","context":{"id":"01K1HQ7PYTY4DE645AXNX9HMK2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.speech_to_phrase_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"1.4.1","in_progress":false,"latest_version":"1.4.1","release_summary":null,"release_url":null,"skipped_version":null,"title":"Speech-to-Phrase","update_percentage":null,"entity_picture":"/api/hassio/addons/core_speech-to-phrase/icon","friendly_name":"Speech-to-Phrase Update","supported_features":25},"last_changed":"2025-08-01T02:26:34.076030+00:00","last_reported":"2025-08-01T02:26:34.076030+00:00","last_updated":"2025-08-01T02:26:34.076030+00:00","context":{"id":"01K1HQ7PYWSZ017QYN130GE1HJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.piper_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"1.6.2","in_progress":false,"latest_version":"1.6.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Piper","update_percentage":null,"entity_picture":"/api/hassio/addons/core_piper/icon","friendly_name":"Piper Update","supported_features":25},"last_changed":"2025-08-01T02:26:34.096542+00:00","last_reported":"2025-08-01T02:26:34.096542+00:00","last_updated":"2025-08-01T02:26:34.096542+00:00","context":{"id":"01K1HQ7PZGRZB3QRN0R3CSQWWP","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.file_editor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"5.8.0","in_progress":false,"latest_version":"5.8.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"File editor","update_percentage":null,"entity_picture":"/api/hassio/addons/core_configurator/icon","friendly_name":"File editor Update","supported_features":25},"last_changed":"2025-08-01T02:26:34.099789+00:00","last_reported":"2025-08-01T02:26:34.099789+00:00","last_updated":"2025-08-01T02:26:34.099789+00:00","context":{"id":"01K1HQ7PZKGC5NFDAK3KFXQ9GF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.advanced_ssh_web_terminal_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"21.0.2","in_progress":false,"latest_version":"21.0.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Advanced SSH & Web Terminal","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ssh/icon","friendly_name":"Advanced SSH & Web Terminal Update","supported_features":25},"last_changed":"2025-08-01T02:26:34.104023+00:00","last_reported":"2025-08-01T02:26:34.104023+00:00","last_updated":"2025-08-01T02:26:34.104023+00:00","context":{"id":"01K1HQ7PZRC37EB6CSWBHN9TJC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_operating_system_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"16.0","in_progress":false,"latest_version":"16.0","release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/releases/tag/16.0","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Operating System Update","supported_features":11},"last_changed":"2025-08-01T02:26:34.106369+00:00","last_reported":"2025-08-01T02:26:34.106369+00:00","last_updated":"2025-08-01T02:26:34.106369+00:00","context":{"id":"01K1HQ7PZTC58G042DJNC7ZS8W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    },
+    {
+      "state": {"entity_id":"update.fan_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"5.25","in_progress":false,"latest_version":"5.25","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/zwave_js/icon.png","friendly_name":"Fan Firmware","supported_features":21},"last_changed":"2025-08-01T03:04:46.007193+00:00","last_reported":"2025-08-01T03:04:46.007193+00:00","last_updated":"2025-08-01T03:04:46.007193+00:00","context":{"id":"01K1HSDN5QPW3NYP49WNJXK1R4","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "latest_version_firmware": null
+      },
+      "last_seen": "2025-08-01T13:16:53.195658+00:00"
+    }
+  ]
+}

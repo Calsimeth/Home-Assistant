@@ -1,0 +1,7 @@
+2025-07-31 21:16:43.795 WARNING (ImportExecutor_0) [py.warnings] /usr/local/lib/python3.13/site-packages/google/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  __import__('pkg_resources').declare_namespace(__name__)
+
+2025-07-31 21:16:49.417 ERROR (MainThread) [homeassistant.components.automation] Automation with alias 'Outdoor Lights On at Sunset' failed to setup actions and has been disabled: Unknown device 'cfb8cff49b4fc7c05f007793e10e2808'
+2025-07-31 21:59:23.509 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities light.nightstand_lamp, light.plug_in_lamp_dimming_module_8 are missing or not currently available
+2025-07-31 21:59:23.510 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities switch.plant_lights are missing or not currently available
+2025-08-01 03:08:22.690 ERROR (MainThread) [homeassistant.components.roborock.coordinator] Error fetching roborock data: Failed to update data

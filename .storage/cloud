@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "minor_version": 4,
+  "key": "cloud",
+  "data": {
+    "alexa_default_expose": [
+      "climate",
+      "cover",
+      "fan",
+      "humidifier",
+      "light",
+      "lock",
+      "scene",
+      "script",
+      "sensor",
+      "switch",
+      "vacuum",
+      "water_heater"
+    ],
+    "alexa_entity_configs": {},
+    "cloud_user": "7da471953ab04bd48b8583f20fcdfbfb",
+    "cloudhooks": {
+      "316d4f90b6b62ed8074b0c1708ce18f3d8b499faa5299cb56216ce4739b0c9d9": {
+        "webhook_id": "316d4f90b6b62ed8074b0c1708ce18f3d8b499faa5299cb56216ce4739b0c9d9",
+        "cloudhook_id": "15eed67fa3fc4f268c34830a0834e8b6",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABj-5pX0d41E27pyblk07t_4oMDJE0NEXFmc12G0KgqnTYXNTLVujTmjgvymgBxRvuqWP9YA6wmFW6otjvHcGkntqquLKGBCORzVjDm0lWKbRCDStSBEW5-5DcCIJAiI3A9RUmoZH3v41JVbrf6ozVp4Pjq1dnvoJ45RlC-dl6mfWVEA_Y=",
+        "managed": true
+      },
+      "e9f5ac676a8caebb1fb7a17fcbfdb4ea71c4c8891222604c0eb6302a83f195e2": {
+        "webhook_id": "e9f5ac676a8caebb1fb7a17fcbfdb4ea71c4c8891222604c0eb6302a83f195e2",
+        "cloudhook_id": "695e2836c22d4d6bb09a6700f58c1098",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABkOKYfqE6nM0UcArI0Tn9wZeMB75C1k0p1bGWxciwPVbji7pSQA8hOQJErTnbHVAw-FwTZFW8u3Pm2Ab0_K0H-nSTW2UAOUT7Y4NRqO-9uQgbAHyTXW26tYpQSJSpMv5bU_2_UVe_V9l5LDuFseIZeBSErc2jcZlty0G74oB54f5SP_AI=",
+        "managed": false
+      }
+    },
+    "alexa_enabled": false,
+    "google_enabled": false,
+    "remote_enabled": false,
+    "google_default_expose": [
+      "climate",
+      "cover",
+      "fan",
+      "humidifier",
+      "light",
+      "lock",
+      "scene",
+      "script",
+      "sensor",
+      "switch",
+      "vacuum",
+      "water_heater"
+    ],
+    "google_entity_configs": {},
+    "google_local_webhook_id": "8bd3605f0a8f772bdf35124db6b238ae56759b83aae96522187a37583b8f7bc4",
+    "google_secure_devices_pin": "7926",
+    "remote_domain": "oqn11cokhydtueh4073t6w9x30n7sb19.ui.nabu.casa",
+    "username": "2f0d3b18-22d2-40d2-be6f-c6e68c3ade18",
+    "alexa_settings_version": 3,
+    "google_settings_version": 3,
+    "google_connected": true,
+    "instance_id": "5360ad89c3774ec1ac4ce8e1a6698273"
+  }
+}
