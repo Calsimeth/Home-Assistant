@@ -1,0 +1,15 @@
+- id: '1677284015199'
+  alias: Outdoor Lights On at Sunset
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 0
+  condition: []
+  action:
+  - type: turn_on
+    device_id: cfb8cff49b4fc7c05f007793e10e2808
+    entity_id: light.node_15
+    domain: light
+    brightness_pct: 100
+  mode: single
