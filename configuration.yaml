@@ -46,3 +46,9 @@ template:
       - name: "Caleb Presence"
         device_class: presence
         state: >
+          {{
+            is_state('device_tracker.pixel_7_pro_2', 'home') or
+            is_state('device_tracker.pixel_7_pro_3', 'home') or
+            is_state('device_tracker.pixel_7_pro_4', 'home') or
+            is_state('device_tracker.pixel_7_pro_5', 'home')
+          }}
