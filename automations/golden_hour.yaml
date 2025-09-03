@@ -1,0 +1,23 @@
+- alias: "Turn on lights at golden hour when home"
+  description: "Turns on lights at the beginning of golden hour if Caleb is home"
+  trigger:
+    - platform: state
+      entity_id: sun2.sun
+      attribute: golden_hour
+  condition:
+    - condition: state
+      entity_id: binary_sensor.caleb_presence
+      state: "home"
+  action:
+    - service: light.turn_on
+      target:
+        entity_id: 
+          - light.above_range_lights
+          - light.above_refrigerator_lights
+          - light.entry_lamp 
+
+      # Optional: Add brightness/color settings
+      # data:
+      #   brightness_pct: 80
+      #   color_temp: 2700
+  mode: single

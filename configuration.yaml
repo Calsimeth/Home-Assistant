@@ -1,4 +1,3 @@
-
 # Loads default set of integrations. Do not remove.
 default_config:
 
@@ -10,6 +9,32 @@ frontend:
 tts:
   - platform: google_translate
 
-automation: !include automations.yaml
+automation: !include_dir_merge_list automations
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+# sun2
+sun2:
+  - unique_id: my_home
+    location: Nashville
+    latitude: 36.1627
+    longitude: -86.7816
+    time_zone: America/Chicago
+    elevation: 0
+template:
+  - sensor:
+      - name: "Golden Hour Active"
+        state: "{{ state_attr('sensor.nashville_sun_phase', 'golden_hour') }}"
+        icon: mdi:weather-sunset
+
+      - name: "Blue Hour Active"
+        state: "{{ state_attr('sensor.nashville_sun_phase', 'blue_hour') }}"
+        icon: mdi:weather-night
+
+      - name: "Sun Rising"
+        state: "{{ state_attr('sensor.nashville_sun_phase', 'rising') }}"
+        icon: mdi:weather-sunset-up
+  - binary_sensor:
+      - name: "Caleb Presence"
+        device_class: presence
+        state: >
