@@ -2,8 +2,8 @@
   description: "Turns on lights at the beginning of golden hour if Caleb is home"
   trigger:
     - platform: state
-      entity_id: sun2.sun
-      attribute: golden_hour
+      entity_id: sensor.golden_hour_active
+      to: "True"
   condition:
     - condition: state
       entity_id: binary_sensor.caleb_presence
