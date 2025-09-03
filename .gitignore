@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -----------------------------------------------------------------
 # Home Assistant Runtime and Data
 # -----------------------------------------------------------------
@@ -77,3 +78,10 @@ image/
 # Backup artifacts
 *.tar
 *.tar.gz
+=======
+# Omitting logs
+*.log
+
+# Omitting keys
+*.pem
+>>>>>>> 078736c (Omitting keys)
