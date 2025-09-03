@@ -21,6 +21,14 @@ sun2:
     longitude: -86.7816
     time_zone: America/Chicago
     elevation: 0
+  # - entities:
+  #       - type: attribute
+  #         entity: sun2.phase
+  #         name: golden_hour
+  #         icon: 'mdi:lan'
+  #         attribute: golden_hour
+  #   type: entities
+
 template:
   - sensor:
       - name: "Golden Hour Active"
