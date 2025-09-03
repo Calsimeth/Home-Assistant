@@ -1,0 +1,41 @@
+- alias: "Turn off everything except essentials (Night Plug-In or 2 AM)"
+  description: "Turns off non-essentials when I plug in phone at night or at 2 AM daily"
+  trigger:
+    # Phone starts charging
+    - platform: state
+      entity_id: binary_sensor.pixel_7_pro_is_charging  # Replace with your sensor
+      from: 'off'
+      to: 'on'
+
+  condition:
+    - condition: time
+      after: '19:00:00'
+      before: '23:59:59'
+    - condition: state
+      entity_id: binary_sensor.caleb_presence  # replace with your actual person entity
+      state: 'home'
+
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id: >
+          {% set ignore = [
+              'switch.nightstand_fan',
+              'switch.q5_max_do_not_disturb',
+              'switch.q5_max_dock_child_lock'
+          ] %}
+          {% set all_entities = states.light | list + states.switch | list %}
+          {{ expand(all_entities)
+             | rejectattr('entity_id', 'in', ignore)
+             | map(attribute='entity_id')
+             | list }}
+    - service: switch.turn_on
+      target:
+        entity_id:
+          - switch.nightstand_fan
+    - service: notify.mobile_app_pixel_7_pro
+      data:
+        title: "Power Down Complete"
+        message: "All non-essential devices have been turned off"
+
+  mode: single
