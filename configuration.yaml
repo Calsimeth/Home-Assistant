@@ -47,8 +47,15 @@ template:
         device_class: presence
         state: >
           {{
-            is_state('device_tracker.pixel_7_pro_2', 'home') or
-            is_state('device_tracker.pixel_7_pro_3', 'home') or
-            is_state('device_tracker.pixel_7_pro_4', 'home') or
-            is_state('device_tracker.pixel_7_pro_5', 'home')
+            is_state('device_tracker.0c_c4_13_45_12_26', 'home')
           }}
+
+device_tracker:
+  - platform: luci
+    host: 192.168.8.1
+    username: root
+    password: [redacted]
+    interval_seconds: 10
+    consider_home: 180
+    new_device_defaults:
+      track_new_devices: true

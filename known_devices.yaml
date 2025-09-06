@@ -1,0 +1,63 @@
+
+0c_c4_13_45_12_26:
+  name: Pixel-7-Pro
+  mac: 0C:C4:13:45:12:26
+  icon:
+  picture:
+  track: true
+
+b0_4a_39_ee_46_96:
+  name: Roborock-Vacuum
+  mac: B0:4A:39:EE:46:96
+  icon:
+  picture:
+  track: true
+
+00_90_a9_f7_df_ce:
+  name: WDMyCloudEX2
+  mac: 00:90:A9:F7:DF:CE
+  icon:
+  picture:
+  track: true
+
+f4_f5_d8_dc_2d_50:
+  name: Google-Home
+  mac: F4:F5:D8:DC:2D:50
+  icon:
+  picture:
+  track: true
+
+7c_b3_7b_eb_df_40:
+  name: 7c_b3_7b_eb_df_40
+  mac: 7C:B3:7B:EB:DF:40
+  icon:
+  picture:
+  track: true
+
+d0_dd_49_39_13_40:
+  name: d0_dd_49_39_13_40
+  mac: D0:DD:49:39:13:40
+  icon:
+  picture:
+  track: true
+
+dc_a6_32_cd_e3_ec:
+  name: Home-Assistant
+  mac: DC:A6:32:CD:E3:EC
+  icon:
+  picture:
+  track: true
+
+1e_d6_c7_4e_51_32:
+  name: 1e_d6_c7_4e_51_32
+  mac: 1E:D6:C7:4E:51:32
+  icon:
+  picture:
+  track: true
+
+ec_91_61_32_a5_f9:
+  name: Agamemnon
+  mac: EC:91:61:32:A5:F9
+  icon:
+  picture:
+  track: true
