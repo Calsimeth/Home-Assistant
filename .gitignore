@@ -1,0 +1,45 @@
+# -----------------------------------------------------------------
+# Home Assistant Runtime and Data
+# -----------------------------------------------------------------
+
+# The entire data directory contains the database, logs, and cache.
+# This must be ignored.
+data/
+homeassistant/
+
+# Specific database files (if they aren't inside a 'data' folder)
+*.db
+home-assistant_v2.db
+
+# Log files
+logs/
+*.log
+
+# -----------------------------------------------------------------
+# Python Environment & Bytecode (If running a custom Python setup)
+# -----------------------------------------------------------------
+
+# Virtual Environment
+venv/
+.venv/
+
+# Bytecode and cache files
+__pycache__/
+*.pyc
+
+# -----------------------------------------------------------------
+# OS-Specific Files
+# -----------------------------------------------------------------
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# -----------------------------------------------------------------
+# IDE and Editor Settings (Optional but recommended)
+# -----------------------------------------------------------------
+# PyCharm, VSCode settings
+.idea/
+*.swp
