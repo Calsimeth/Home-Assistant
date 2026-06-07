@@ -1,26 +1,56 @@
 - alias: "Turn on lights at golden hour when home"
-  description: "Turns on lights at the beginning of golden hour if Caleb is home"
+  description: "Turns on lights during the evening lighting window when Caleb is home"
   trigger:
+    - platform: numeric_state
+      entity_id: sun.sun
+      attribute: elevation
+      below: 6
     - platform: state
-      entity_id: sensor.golden_hour_active
-      to: "True"
+      entity_id: sensor.caleb_presence
+      to: "home"
+    - platform: homeassistant
+      event: start
   condition:
     - condition: state
       entity_id: sensor.caleb_presence
       state: "home"
+    - condition: numeric_state
+      entity_id: sun.sun
+      attribute: elevation
+      below: 6
     - condition: time
-      after: '12:00:00'
-      before: '23:00:00'
+      after: "12:00:00"
+      before: "23:00:00"
+  variables:
+    light_pairs:
+      - current: light.above_range_lights
+        refreshed: light.kitchen_above_range_lights
+      - current: light.above_refrigerator_lights
+        refreshed: light.kitchen_above_refrigerator_lights
+      - current: light.floor_lamp
+        refreshed: light.kitchen_floor_lamp_string_lights
+      - current: light.corner_lamp
+        refreshed: light.formal_dining_room_corner_lamp
+      - current: light.wiz_a19_2
+        refreshed: light.living_room_wiz_a19
+      - current: light.salt_lamp
+        refreshed: light.upstairs_salt_lamp
+      - current: light.wiz_a19
+        refreshed: light.bonus_room_wiz_a19
+      - current: light.table_lamp
+        refreshed: light.entryway_table_lamp
+    resolved_lights: >
+      {% set ns = namespace(entities=[]) %}
+      {% for light in light_pairs %}
+        {% if states(light.refreshed) not in ['unknown', 'unavailable'] %}
+          {% set ns.entities = ns.entities + [light.refreshed] %}
+        {% elif states(light.current) not in ['unknown', 'unavailable'] %}
+          {% set ns.entities = ns.entities + [light.current] %}
+        {% endif %}
+      {% endfor %}
+      {{ ns.entities }}
   action:
     - service: light.turn_on
       target:
-        entity_id: 
-          - light.above_range_lights
-          - light.above_refrigerator_lights
-          - light.entry_lamp 
-
-      # Optional: Add brightness/color settings
-      # data:
-      #   brightness_pct: 80
-      #   color_temp: 2700
+        entity_id: "{{ resolved_lights }}"
   mode: single

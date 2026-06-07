@@ -1,15 +1,29 @@
 - sensor:
     - name: "Golden Hour Active"
-      state: "{{ state_attr('sensor.nashville_sun_phase', 'golden_hour') }}"
+      state: >
+        {% set elevation = state_attr('sun.sun', 'elevation') | float(999) %}
+        {% set rising = state_attr('sun.sun', 'rising') %}
+        {{ not rising and -4 <= elevation <= 6 }}
       icon: mdi:weather-sunset
+      attributes:
+        elevation: "{{ state_attr('sun.sun', 'elevation') }}"
+        rising: "{{ state_attr('sun.sun', 'rising') }}"
 
     - name: "Blue Hour Active"
-      state: "{{ state_attr('sensor.nashville_sun_phase', 'blue_hour') }}"
+      state: >
+        {% set elevation = state_attr('sun.sun', 'elevation') | float(999) %}
+        {% set rising = state_attr('sun.sun', 'rising') %}
+        {{ not rising and -6 <= elevation < -4 }}
       icon: mdi:weather-night
+      attributes:
+        elevation: "{{ state_attr('sun.sun', 'elevation') }}"
+        rising: "{{ state_attr('sun.sun', 'rising') }}"
 
     - name: "Sun Rising"
-      state: "{{ state_attr('sensor.nashville_sun_phase', 'rising') }}"
+      state: "{{ state_attr('sun.sun', 'rising') }}"
       icon: mdi:weather-sunset-up
+      attributes:
+        elevation: "{{ state_attr('sun.sun', 'elevation') }}"
 
     # Individual device tracker sensors
     - name: "Pixel 10 on 24G"
@@ -24,24 +38,48 @@
       state: >
         {{ states('device_tracker.3e_32_7f_b5_ca_8f') }}
 
-    # Ecobee presence sensor
+    # GPS / mobile-app / geocoded presence.
+    - name: "Caleb GPS Presence"
+      state: >
+        {% if is_state('person.caleb', 'home') %}
+          home
+        {% else %}
+          away
+        {% endif %}
+      attributes:
+        person_caleb: "{{ states('person.caleb') }}"
+
+    # Ecobee presence sensor using mode, occupancy, and motion.
     - name: "Ecobee Presence"
       state: >
         {% set mode = states('select.downstairs_current_mode') %}
-        {% if mode == 'away' or mode in ['unknown', 'unavailable'] %}
-          away
-        {% else %}
+        {% set occupied = is_state('binary_sensor.downstairs_occupancy', 'on') or
+           is_state('binary_sensor.upstairs_occupancy', 'on') %}
+        {% set motion = is_state('binary_sensor.downstairs_motion', 'on') or
+           is_state('binary_sensor.upstairs_motion', 'on') %}
+        {% if mode == 'home' or occupied or motion %}
           home
+        {% else %}
+          away
         {% endif %}
+      attributes:
+        downstairs_mode: "{{ states('select.downstairs_current_mode') }}"
+        downstairs_occupancy: "{{ states('binary_sensor.downstairs_occupancy') }}"
+        upstairs_occupancy: "{{ states('binary_sensor.upstairs_occupancy') }}"
+        downstairs_motion: "{{ states('binary_sensor.downstairs_motion') }}"
+        upstairs_motion: "{{ states('binary_sensor.upstairs_motion') }}"
 
-    # Combined sensor that reads from all individual sensors
+    # Combined presence sensor: home if any available mechanism says home.
     - name: "Caleb Presence"
       state: >
-        {% if is_state('sensor.pixel_10_on_24g', 'home') or
-           is_state('sensor.pixel_10_on_5g', 'home') or
-           is_state('sensor.pixel_10_on_6g', 'home') or
-           is_state('sensor.caleb_ecobee_presence', 'home') %}
+        {% if is_state('sensor.caleb_gps_presence', 'home') or
+           is_state('sensor.caleb_wifi_presence', 'home') or
+           is_state('sensor.ecobee_presence', 'home') %}
           home
         {% else %}
           away
         {% endif %}
+      attributes:
+        gps_presence: "{{ states('sensor.caleb_gps_presence') }}"
+        wifi_presence: "{{ states('sensor.caleb_wifi_presence') }}"
+        ecobee_presence: "{{ states('sensor.ecobee_presence') }}"

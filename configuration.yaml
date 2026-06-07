@@ -29,7 +29,7 @@ device_tracker:
   - platform: luci
     host: 192.168.8.1
     username: root
-    password: [REMOVED_ROTATED_ROUTER_PASSWORD]
+    password: !secret router_admin_password
     interval_seconds: 10
     consider_home: 180
     new_device_defaults:
@@ -42,3 +42,4 @@ input_text: !include helpers/input_text.yaml
 input_boolean: !include helpers/input_boolean.yaml
 # switch: !include switches/groups.yaml
 template: !include templates/sensors.yaml
+command_line: !include command_line.yaml

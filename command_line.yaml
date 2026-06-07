@@ -1,0 +1,4 @@
+- sensor:
+    name: "Caleb WiFi Presence"
+    command: "python3 /config/tools/caleb_wifi_presence.py"
+    scan_interval: 30
