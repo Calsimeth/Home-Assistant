@@ -43,3 +43,37 @@ Thumbs.db
 # PyCharm, VSCode settings
 .idea/
 *.swp
+
+# -----------------------------------------------------------------
+# Fixing credential leak
+# -----------------------------------------------------------------
+
+# Home Assistant runtime data
+.storage/
+.cloud/
+
+# Databases
+home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+
+# Logs
+home-assistant.log
+home-assistant.log.*
+*.fault
+
+# Secrets
+secrets.yaml
+
+# Generated content
+tts/
+image/
+
+# Certificates
+*.pem
+*.key
+*.crt
+
+# Backup artifacts
+*.tar
+*.tar.gz
