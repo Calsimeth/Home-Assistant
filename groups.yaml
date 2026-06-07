@@ -1,0 +1,8 @@
+kitchen_all_lights:
+  name: Kitchen All Lights
+  entities:
+    - switch.overhead_lights
+    - switch.corner_under_cabinet_lights
+    - switch.range_under_cabinet_lights
+    - light.above_range_lights
+    - light.above_refrigerator_lights

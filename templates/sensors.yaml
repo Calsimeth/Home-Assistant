@@ -1,0 +1,47 @@
+- sensor:
+    - name: "Golden Hour Active"
+      state: "{{ state_attr('sensor.nashville_sun_phase', 'golden_hour') }}"
+      icon: mdi:weather-sunset
+
+    - name: "Blue Hour Active"
+      state: "{{ state_attr('sensor.nashville_sun_phase', 'blue_hour') }}"
+      icon: mdi:weather-night
+
+    - name: "Sun Rising"
+      state: "{{ state_attr('sensor.nashville_sun_phase', 'rising') }}"
+      icon: mdi:weather-sunset-up
+
+    # Individual device tracker sensors
+    - name: "Pixel 10 on 24G"
+      state: >
+        {{ states('device_tracker.3e_75_50_39_ba_5a') }}
+
+    - name: "Pixel 10 on 5G"
+      state: >
+        {{ states('device_tracker.da_86_2b_9a_cd_1c') }}
+
+    - name: "Pixel 10 on 6G"
+      state: >
+        {{ states('device_tracker.3e_32_7f_b5_ca_8f') }}
+
+    # Ecobee presence sensor
+    - name: "Ecobee Presence"
+      state: >
+        {% set mode = states('select.downstairs_current_mode') %}
+        {% if mode == 'away' or mode in ['unknown', 'unavailable'] %}
+          away
+        {% else %}
+          home
+        {% endif %}
+
+    # Combined sensor that reads from all individual sensors
+    - name: "Caleb Presence"
+      state: >
+        {% if is_state('sensor.pixel_10_on_24g', 'home') or
+           is_state('sensor.pixel_10_on_5g', 'home') or
+           is_state('sensor.pixel_10_on_6g', 'home') or
+           is_state('sensor.caleb_ecobee_presence', 'home') %}
+          home
+        {% else %}
+          away
+        {% endif %}

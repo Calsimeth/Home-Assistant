@@ -3,17 +3,17 @@
   trigger:
     # Phone starts charging
     - platform: state
-      entity_id: binary_sensor.pixel_7_pro_is_charging  # Replace with your sensor
-      from: 'off'
-      to: 'on'
+      entity_id: binary_sensor.pixel_10_pro_is_charging # Replace with your sensor
+      from: "off"
+      to: "on"
 
   condition:
     - condition: time
-      after: '19:00:00'
-      before: '23:59:59'
+      after: "21:30:00"
+      before: "06:00:00"
     - condition: state
-      entity_id: binary_sensor.caleb_presence  # replace with your actual person entity
-      state: 'home'
+      entity_id: sensor.caleb_presence # replace with your actual person entity
+      state: "home"
 
   action:
     - service: homeassistant.turn_off
@@ -33,7 +33,7 @@
       target:
         entity_id:
           - switch.nightstand_fan
-    - service: notify.mobile_app_pixel_7_pro
+    - service: notify.mobile_app_pixel_10_pro
       data:
         title: "Power Down Complete"
         message: "All non-essential devices have been turned off"

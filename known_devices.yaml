@@ -1,3 +1,9 @@
+3e_75_50_39_ba_5a :
+  name: Pixel-10-Pro
+  mac: 3E:75:50:39:BA:5A 
+  icon:
+  picture:
+  track: true
 
 0c_c4_13_45_12_26:
   name: Pixel-7-Pro
@@ -58,6 +64,181 @@ dc_a6_32_cd_e3_ec:
 ec_91_61_32_a5_f9:
   name: Agamemnon
   mac: EC:91:61:32:A5:F9
+  icon:
+  picture:
+  track: true
+
+d4_d8_53_86_b7_bc:
+  name: d4_d8_53_86_b7_bc
+  mac: D4:D8:53:86:B7:BC
+  icon:
+  picture:
+  track: true
+
+96_9a_3a_38_c9_92:
+  name: 96_9a_3a_38_c9_92
+  mac: 96:9A:3A:38:C9:92
+  icon:
+  picture:
+  track: true
+
+3e_dd_23_77_f9_ef:
+  name: 3e_dd_23_77_f9_ef
+  mac: 3E:DD:23:77:F9:EF
+  icon:
+  picture:
+  track: true
+
+0a_a0_5a_ef_7c_9f:
+  name: 0a_a0_5a_ef_7c_9f
+  mac: 0A:A0:5A:EF:7C:9F
+  icon:
+  picture:
+  track: true
+
+a6_df_0b_28_90_f6:
+  name: a6_df_0b_28_90_f6
+  mac: A6:DF:0B:28:90:F6
+  icon:
+  picture:
+  track: true
+
+44_61_32_6d_6b_b8:
+  name: 44_61_32_6d_6b_b8
+  mac: 44:61:32:6D:6B:B8
+  icon:
+  picture:
+  track: true
+
+20_df_b9_21_4e_7c:
+  name: 20_df_b9_21_4e_7c
+  mac: 20:DF:B9:21:4E:7C
+  icon:
+  picture:
+  track: true
+
+a0_88_b4_4e_8a_c8:
+  name: a0_88_b4_4e_8a_c8
+  mac: A0:88:B4:4E:8A:C8
+  icon:
+  picture:
+  track: true
+
+da_86_2b_9a_cd_1c:
+  name: da_86_2b_9a_cd_1c
+  mac: DA:86:2B:9A:CD:1C
+  icon:
+  picture:
+  track: true
+
+3e_32_7f_b5_ca_8f:
+  name: 3e_32_7f_b5_ca_8f
+  mac: 3E:32:7F:B5:CA:8F
+  icon:
+  picture:
+  track: true
+
+2c_aa_8e_36_87_9b:
+  name: 2c_aa_8e_36_87_9b
+  mac: 2C:AA:8E:36:87:9B
+  icon:
+  picture:
+  track: true
+
+d0_3f_27_10_03_ca:
+  name: d0_3f_27_10_03_ca
+  mac: D0:3F:27:10:03:CA
+  icon:
+  picture:
+  track: true
+
+d0_cf_13_c0_2b_b8:
+  name: d0_cf_13_c0_2b_b8
+  mac: D0:CF:13:C0:2B:B8
+  icon:
+  picture:
+  track: true
+
+e4_b0_63_f8_11_f8:
+  name: e4_b0_63_f8_11_f8
+  mac: E4:B0:63:F8:11:F8
+  icon:
+  picture:
+  track: true
+
+d0_cf_13_c1_72_48:
+  name: d0_cf_13_c1_72_48
+  mac: D0:CF:13:C1:72:48
+  icon:
+  picture:
+  track: true
+
+82_5f_75_c6_22_a5:
+  name: 82_5f_75_c6_22_a5
+  mac: 82:5F:75:C6:22:A5
+  icon:
+  picture:
+  track: true
+
+d8_a0_11_78_65_d8:
+  name: d8_a0_11_78_65_d8
+  mac: D8:A0:11:78:65:D8
+  icon:
+  picture:
+  track: true
+
+d8_a0_11_78_54_c2:
+  name: d8_a0_11_78_54_c2
+  mac: D8:A0:11:78:54:C2
+  icon:
+  picture:
+  track: true
+
+9c_6b_00_89_de_85:
+  name: 9c_6b_00_89_de_85
+  mac: 9C:6B:00:89:DE:85
+  icon:
+  picture:
+  track: true
+
+1c_1b_0d_08_65_01:
+  name: 1c_1b_0d_08_65_01
+  mac: 1C:1B:0D:08:65:01
+  icon:
+  picture:
+  track: true
+
+16_91_82_0e_39_a8:
+  name: 16_91_82_0e_39_a8
+  mac: 16:91:82:0E:39:A8
+  icon:
+  picture:
+  track: true
+
+16_91_82_0e_39_a6:
+  name: 16_91_82_0e_39_a6
+  mac: 16:91:82:0E:39:A6
+  icon:
+  picture:
+  track: true
+
+6e_0f_62_43_5e_20:
+  name: 6e_0f_62_43_5e_20
+  mac: 6E:0F:62:43:5E:20
+  icon:
+  picture:
+  track: true
+
+e4_b0_63_f7_83_3c:
+  name: e4_b0_63_f7_83_3c
+  mac: E4:B0:63:F7:83:3C
+  icon:
+  picture:
+  track: true
+
+d0_cf_13_c1_0f_74:
+  name: d0_cf_13_c1_0f_74
+  mac: D0:CF:13:C1:0F:74
   icon:
   picture:
   track: true

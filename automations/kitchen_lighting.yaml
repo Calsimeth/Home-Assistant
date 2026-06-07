@@ -1,0 +1,117 @@
+# ─────────────────────────────────────────────────────────────
+# Collect flips (any switch, rapid window)
+# ─────────────────────────────────────────────────────────────
+- id: kitchen_flip_collector
+  alias: Kitchen – Flip Collector
+  mode: restart
+
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.overhead_lights_input_0
+        - binary_sensor.corner_under_cabinet_lights_input_0
+        - binary_sensor.range_under_cabinet_lights_input_0
+
+  action:
+    - service: counter.increment
+      target:
+        entity_id: counter.kitchen_flip_count
+
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.kitchen_last_trigger
+      data:
+        value: "{{ trigger.entity_id }}"
+
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.kitchen_last_action
+      data:
+        value: "{{ trigger.to_state.state }}"
+
+    - service: timer.start
+      target:
+        entity_id: timer.kitchen_flip_window
+      data:
+        duration: "00:00:01"
+
+
+# ─────────────────────────────────────────────────────────────
+# Execute once window closes
+# ─────────────────────────────────────────────────────────────
+- id: kitchen_flip_executor
+  alias: Kitchen – Flip Executor
+  mode: single
+
+  trigger:
+    - platform: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.kitchen_flip_window
+
+  variables:
+    flips: "{{ states('counter.kitchen_flip_count') | int }}"
+    last: "{{ states('input_text.kitchen_last_trigger') }}"
+    action: "{{ states('input_text.kitchen_last_action') }}"
+    is_overhead: "{{ last == 'binary_sensor.overhead_lights_input_0' }}"
+    is_under: "{{ not is_overhead }}"
+
+  action:
+    - choose:
+
+        # ── OVERHEAD SWITCH ─────────────────────────────
+        # ON
+        - conditions: "{{ is_overhead and action == 'on' and flips == 1 }}"
+          sequence:
+            - service: homeassistant.turn_on
+              target:
+                entity_id: group.kitchen_all_lights
+
+        - conditions: "{{ is_overhead and action == 'on' and flips >= 2 }}"
+          sequence:
+            - service: homeassistant.turn_on
+              target:
+                entity_id:
+                  - switch.corner_under_cabinet_lights
+                  - switch.range_under_cabinet_lights
+                  - light.above_range_lights
+                  - light.above_refrigerator_lights
+            - service: homeassistant.turn_off
+              target:
+                entity_id: switch.overhead_lights
+
+        # OFF
+        - conditions: "{{ is_overhead and action == 'off' }}"
+          sequence:
+            - service: homeassistant.turn_off
+              target:
+                entity_id: group.kitchen_all_lights
+
+        # ── UNDER-CABINET SWITCHES ─────────────────────
+        # ON
+        - conditions: "{{ is_under and action == 'on' and flips == 1 }}"
+          sequence:
+            - service: homeassistant.turn_on
+              target:
+                entity_id:
+                  - switch.corner_under_cabinet_lights
+                  - switch.range_under_cabinet_lights
+                  - light.above_range_lights
+                  - light.above_refrigerator_lights
+
+        - conditions: "{{ is_under and action == 'on' and flips >= 2 }}"
+          sequence:
+            - service: homeassistant.turn_on
+              target:
+                entity_id: group.kitchen_all_lights
+
+        # OFF
+        - conditions: "{{ is_under and action == 'off' }}"
+          sequence:
+            - service: homeassistant.turn_off
+              target:
+                entity_id: group.kitchen_all_lights
+
+    - service: counter.reset
+      target:
+        entity_id: counter.kitchen_flip_count

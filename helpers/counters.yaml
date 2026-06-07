@@ -1,0 +1,3 @@
+kitchen_flip_count:
+  initial: 0
+  step: 1

@@ -6,7 +6,7 @@
       to: "True"
   condition:
     - condition: state
-      entity_id: binary_sensor.caleb_presence
+      entity_id: sensor.caleb_presence
       state: "home"
     - condition: time
       after: '12:00:00'

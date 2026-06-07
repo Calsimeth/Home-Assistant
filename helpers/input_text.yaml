@@ -1,0 +1,5 @@
+kitchen_last_trigger:
+  name: Kitchen Last Trigger
+
+kitchen_last_action:
+  name: Kitchen Last Action

@@ -1,17 +1,15 @@
-# Loads default set of integrations. Do not remove.
 default_config:
 
-# Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
 
-# Text to speech
 tts:
   - platform: google_translate
 
 automation: !include_dir_merge_list automations
 script: !include scripts.yaml
 scene: !include scenes.yaml
+group: !include groups.yaml
 
 # sun2
 sun2:
@@ -20,42 +18,27 @@ sun2:
     latitude: 36.1627
     longitude: -86.7816
     time_zone: America/Chicago
-    elevation: 0
-  # - entities:
-  #       - type: attribute
-  #         entity: sun2.phase
-  #         name: golden_hour
-  #         icon: 'mdi:lan'
-  #         attribute: golden_hour
-  #   type: entities
-
-template:
-  - sensor:
-      - name: "Golden Hour Active"
-        state: "{{ state_attr('sensor.nashville_sun_phase', 'golden_hour') }}"
-        icon: mdi:weather-sunset
-
-      - name: "Blue Hour Active"
-        state: "{{ state_attr('sensor.nashville_sun_phase', 'blue_hour') }}"
-        icon: mdi:weather-night
-
-      - name: "Sun Rising"
-        state: "{{ state_attr('sensor.nashville_sun_phase', 'rising') }}"
-        icon: mdi:weather-sunset-up
-  - binary_sensor:
-      - name: "Caleb Presence"
-        device_class: presence
-        state: >
-          {{
-            is_state('device_tracker.0c_c4_13_45_12_26', 'home')
-          }}
+    observer_elevation: 0
+    
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 127.0.0.1
 
 device_tracker:
   - platform: luci
     host: 192.168.8.1
     username: root
-    password: [redacted]
+    password: [REMOVED_ROTATED_ROUTER_PASSWORD]
     interval_seconds: 10
     consider_home: 180
     new_device_defaults:
       track_new_devices: true
+
+# Split configs
+counter: !include helpers/counters.yaml
+timer: !include helpers/timers.yaml
+input_text: !include helpers/input_text.yaml
+input_boolean: !include helpers/input_boolean.yaml
+# switch: !include switches/groups.yaml
+template: !include templates/sensors.yaml

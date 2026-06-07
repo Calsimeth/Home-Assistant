@@ -2,17 +2,17 @@
   description: "Turn on lights when I unplug phone between 6–8 AM, but only if I'm home"
   trigger:
     - platform: state
-      entity_id: binary_sensor.pixel_7_pro_is_charging
-      from: 'on'
-      to: 'off'
+      entity_id: binary_sensor.pixel_10_pro_is_charging
+      from: "on"
+      to: "off"
 
   condition:
     - condition: time
-      after: '06:00:00'
-      before: '09:00:00'
+      after: "06:00:00"
+      before: "18:00:00"
     - condition: state
-      entity_id: binary_sensor.caleb_presence  # replace with your actual person entity
-      state: 'home'
+      entity_id: sensor.caleb_presence # replace with your actual person entity
+      state: "home"
 
   action:
     - service: light.turn_on
