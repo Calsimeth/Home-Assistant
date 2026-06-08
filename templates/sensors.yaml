@@ -41,8 +41,12 @@
     # GPS / mobile-app / geocoded presence.
     - name: "Caleb GPS Presence"
       state: >
+        {% set current_address = states('sensor.pixel_10_pro_geocoded_location') | lower | replace(' drive,', ' dr,') | replace(', usa', '') %}
+        {% set home_address = states('input_text.home_geocoded_address') | lower | replace(' drive,', ' dr,') | replace(', usa', '') %}
+        {% set geocoded_home = home_address not in ['unknown', 'unavailable', 'none', ''] and current_address == home_address %}
         {% if is_state('person.caleb', 'home') or
-           is_state('device_tracker.pixel_10_pro', 'home') %}
+           is_state('device_tracker.pixel_10_pro', 'home') or
+           geocoded_home %}
           home
         {% else %}
           away
@@ -52,6 +56,10 @@
         pixel_10_pro_tracker: "{{ states('device_tracker.pixel_10_pro') }}"
         geocoded_location_available: >
           {{ states('sensor.pixel_10_pro_geocoded_location') not in ['unknown', 'unavailable', 'none', ''] }}
+        geocoded_home_match: >
+          {% set current_address = states('sensor.pixel_10_pro_geocoded_location') | lower | replace(' drive,', ' dr,') | replace(', usa', '') %}
+          {% set home_address = states('input_text.home_geocoded_address') | lower | replace(' drive,', ' dr,') | replace(', usa', '') %}
+          {{ home_address not in ['unknown', 'unavailable', 'none', ''] and current_address == home_address }}
 
     # Companion app Wi-Fi SSID presence across the primary home networks.
     - name: "Caleb Companion WiFi Presence"

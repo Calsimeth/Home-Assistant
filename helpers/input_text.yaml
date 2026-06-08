@@ -3,3 +3,8 @@ kitchen_last_trigger:
 
 kitchen_last_action:
   name: Kitchen Last Action
+
+home_geocoded_address:
+  name: Home Geocoded Address
+  max: 255
+  initial: !secret home_geocoded_address
