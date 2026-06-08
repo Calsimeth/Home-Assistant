@@ -41,13 +41,29 @@
     # GPS / mobile-app / geocoded presence.
     - name: "Caleb GPS Presence"
       state: >
-        {% if is_state('person.caleb', 'home') %}
+        {% if is_state('person.caleb', 'home') or
+           is_state('device_tracker.pixel_10_pro', 'home') %}
           home
         {% else %}
           away
         {% endif %}
       attributes:
         person_caleb: "{{ states('person.caleb') }}"
+        pixel_10_pro_tracker: "{{ states('device_tracker.pixel_10_pro') }}"
+        geocoded_location_available: >
+          {{ states('sensor.pixel_10_pro_geocoded_location') not in ['unknown', 'unavailable', 'none', ''] }}
+
+    # Companion app Wi-Fi SSID presence across the primary home networks.
+    - name: "Caleb Companion WiFi Presence"
+      state: >
+        {% set home_ssids = ['Vefari', 'Vefari-5G', 'Vefari-6G'] %}
+        {% if states('sensor.pixel_10_pro_wi_fi_connection') in home_ssids %}
+          home
+        {% else %}
+          away
+        {% endif %}
+      attributes:
+        wifi_connection: "{{ states('sensor.pixel_10_pro_wi_fi_connection') }}"
 
     # Ecobee presence sensor using mode, occupancy, and motion.
     - name: "Ecobee Presence"
@@ -74,6 +90,7 @@
       state: >
         {% if is_state('sensor.caleb_gps_presence', 'home') or
            is_state('sensor.caleb_wifi_presence', 'home') or
+           is_state('sensor.caleb_companion_wifi_presence', 'home') or
            is_state('sensor.ecobee_presence', 'home') %}
           home
         {% else %}
@@ -81,5 +98,6 @@
         {% endif %}
       attributes:
         gps_presence: "{{ states('sensor.caleb_gps_presence') }}"
-        wifi_presence: "{{ states('sensor.caleb_wifi_presence') }}"
+        router_wifi_presence: "{{ states('sensor.caleb_wifi_presence') }}"
+        companion_wifi_presence: "{{ states('sensor.caleb_companion_wifi_presence') }}"
         ecobee_presence: "{{ states('sensor.ecobee_presence') }}"
