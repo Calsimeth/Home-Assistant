@@ -1,17 +1,19 @@
 - alias: "Morning wake-up lights when unplugging phone"
-  description: "Turn on lights when I unplug phone between 6–8 AM, but only if I'm home"
+  description: "Turn on morning lights when I unplug phone during the morning/day while home"
   trigger:
     - platform: state
-      entity_id: binary_sensor.pixel_10_pro_is_charging
-      from: "on"
-      to: "off"
+      entity_id: sensor.pixel_10_pro_battery_state
+      to: "discharging"
+    - platform: state
+      entity_id: sensor.pixel_10_pro_charger_type
+      to: "none"
 
   condition:
     - condition: time
       after: "06:00:00"
       before: "18:00:00"
     - condition: state
-      entity_id: sensor.caleb_presence # replace with your actual person entity
+      entity_id: sensor.caleb_presence
       state: "home"
 
   action:

@@ -1,18 +1,21 @@
 - alias: "Turn off everything except essentials (Night Plug-In or 2 AM)"
   description: "Turns off non-essentials when I plug in phone at night or at 2 AM daily"
   trigger:
-    # Phone starts charging
     - platform: state
-      entity_id: binary_sensor.pixel_10_pro_is_charging # Replace with your sensor
-      from: "off"
-      to: "on"
+      entity_id: sensor.pixel_10_pro_battery_state
+      to: "charging"
+    - platform: state
+      entity_id: sensor.pixel_10_pro_charger_type
+      from: "none"
+    - platform: time
+      at: "02:00:00"
 
   condition:
     - condition: time
       after: "21:30:00"
       before: "06:00:00"
     - condition: state
-      entity_id: sensor.caleb_presence # replace with your actual person entity
+      entity_id: sensor.caleb_presence
       state: "home"
 
   action:
@@ -22,16 +25,17 @@
           {% set ignore = [
               'switch.nightstand_fan',
               'switch.q5_max_do_not_disturb',
-              'switch.q5_max_dock_child_lock'
+              'switch.q5_max_dock_child_lock',
+              'switch.front_camera_notifications',
+              'switch.front_camera_motion_detection',
+              'switch.front_camera_power',
+              'switch.rear_camera_notifications',
+              'switch.rear_camera_motion_detection',
+              'switch.rear_camera_power'
           ] %}
-          {% set wyze_entities = integration_entities('wyzeapi') %}
-          {% set wyze_camera_entities =
-              (wyze_entities | select('match', '^camera[.]') | list)
-              + (wyze_entities | select('match', '^switch[.].*_(power|notifications|motion_detection)$') | list)
-          %}
           {% set all_entities = states.light | list + states.switch | list %}
           {{ expand(all_entities)
-             | rejectattr('entity_id', 'in', ignore + wyze_camera_entities)
+             | rejectattr('entity_id', 'in', ignore)
              | map(attribute='entity_id')
              | list }}
     - service: switch.turn_on
